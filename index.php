@@ -1,5 +1,6 @@
 <?php
 require 'config/database.php';
+require 'app/controllers/homeController.php';
 echo "Bienvenue sur le blog";
 # == Frontcontroller == #
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_URL);
