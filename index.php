@@ -2,6 +2,8 @@
 require 'config/database.php';
 require 'app/controllers/homeController.php';
 echo "Bienvenue sur le blog";
+?>
+<?php
 # == Frontcontroller == #
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_URL);
 ## Ici je stock toutes les requette GET['action'] dans la variable $action
