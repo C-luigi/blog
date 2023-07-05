@@ -1,6 +1,7 @@
 <?php
-require_once 'app/persistences/blogPostData.php';
-
+require 'app/persistences/blogPostData.php';
+require_once 'index.php';
 echo "Hello world<br>";
-var_dump(lastBlogPosts());
-
+global $pdo;
+$articlescontent = lastBlogPosts();
+include "ressources/views/home.tpl.php";

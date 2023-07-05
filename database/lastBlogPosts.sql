@@ -1,5 +1,6 @@
-SELECT *
+SELECT articles.*,
+       authors.psauthor
 FROM articles
-         INNER JOIN authors ON authors.id = articles.AUTHOR_id
+INNER JOIN authors ON authors.id = articles.AUTHOR_id
 ORDER BY articles.id DESC
-    LIMIT 10
+LIMIT 10

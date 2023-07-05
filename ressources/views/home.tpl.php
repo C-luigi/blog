@@ -3,18 +3,18 @@ require_once 'ressources/views/layouts/header.tpl.php';
 //var_dump($articlescontent);
 ?>
 <main>
-<?php foreach ($articlescontent as $articles): ?>
-    <?php if (isset($articles)): ?>
+<?php foreach ($articlescontent as $viewArticles): ?>
+    <?php if (isset($viewArticles)): ?>
         <article>
             <h2>
-                <?= $articles['title'] ?>
+                <a href="?action=blogPost&id=<?= $viewArticles['id'] ?>"><?= $viewArticles['title'] ?></a>
             </h2>
             <div>
-                <?= $articles['datestart'].' /' ?>
-                <?= $articles['datend'] ?>
+                <?= $viewArticles['datestart'].' /' ?>
+                <?= $viewArticles['datend'] ?>
             </div>
             <div>
-                <i><?= $articles['psauthor'] ?></i>
+                <i><?= $viewArticles['psauthor'] ?></i>
             </div>
         </article>
     <?php else: ?>
