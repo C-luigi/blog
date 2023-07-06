@@ -62,3 +62,12 @@ function getIdFromPseudoAuthor($pseudo):string{
     $data = $stmt->fetch(PDO::FETCH_ASSOC);
     return $data['id'];
 }
+//fonction qui supprime un article en fonction de l'id séléctionné
+function blogPostDelete($id){
+    $dataBase = getDatabase();
+    //connexion a la bdd
+    $requette = file_get_contents("database/blogPostDeleteArticle.sql");
+    $stmt = $dataBase->prepare($requette);
+    $stmt ->bindValue('artID', $id, PDO::PARAM_INT);
+    $stmt->execute();
+}

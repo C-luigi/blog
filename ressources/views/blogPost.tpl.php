@@ -40,6 +40,8 @@ require_once 'ressources/views/layouts/header.tpl.php';
                     </div>
                 </article>
         <?php endforeach; ?>
+        <a href="index.php?action=home">Home</a>
+        <a href="?action=blogPostDelete&id=<?= $viewArticles['id'] ?>">Supprimer</a>
     </main>
 <?php
 require_once 'ressources/views/layouts/footer.tpl.php';

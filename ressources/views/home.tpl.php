@@ -21,6 +21,7 @@ require_once 'ressources/views/layouts/header.tpl.php';
         pas d'article
     <?php endif; ?>
 <?php endforeach; ?>
+    <a href="index.php?action=blogPostCreate">Create articles</a>
 </main>
 <?php
 require_once 'ressources/views/layouts/footer.tpl.php';

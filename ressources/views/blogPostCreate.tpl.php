@@ -2,7 +2,7 @@
 require_once 'ressources/views/layouts/header.tpl.php';
 ?>
 <main>
-    <form action="index.php?action=create" method="post">
+    <form action="index.php?action=blogPostCreate" method="post">
         <label>Titre :
             <textarea name="title" placeholder="Titre d'article en 40 caractères" rows="5"></textarea><br>
         </label>
@@ -26,6 +26,7 @@ require_once 'ressources/views/layouts/header.tpl.php';
         <input type="text" id="pseudo" name="author_id"><br>
         <input type="submit" name="submit_button" value="Envoyer">
     </form>
+    <a href="index.php?action=home">Home</a>
 </main>
 <?php
 require_once 'ressources/views/layouts/footer.tpl.php';

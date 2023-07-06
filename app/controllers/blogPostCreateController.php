@@ -1,7 +1,6 @@
 <?php
 require 'app/persistences/blogPostData.php';
 require_once 'index.php';
-echo "Ciao bello<br>";
 global $pdo;
 
 if(count($_POST) ):

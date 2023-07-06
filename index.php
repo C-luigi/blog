@@ -9,7 +9,8 @@ $routes = [
     #Création d'un tableau associatif dans lequel je stock toutes les routes possible
     'home' => 'app/controllers/homeController.php',
     'blogPost' => 'app/controllers/blogPostController.php',
-    'create' => 'app/controllers/blogPostCreateController.php',
+    'blogPostCreate' => 'app/controllers/blogPostCreateController.php',
+    'blogPostDelete' => 'app/controllers/blogPostDeleteController.php',
 ];
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_URL);
 ## Ici je stock toutes les requette GET['action'] dans la variable $action
