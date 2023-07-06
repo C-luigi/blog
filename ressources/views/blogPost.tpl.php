@@ -1,7 +1,5 @@
 <?php
 require_once 'ressources/views/layouts/header.tpl.php';
-var_dump($articlescontent);
-var_dump($articlesCommentary);
 ?>
     <main>
         <?php foreach ($articlescontent as $viewArticles): ?>

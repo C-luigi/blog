@@ -9,7 +9,7 @@ $routes = [
     #Création d'un tableau associatif dans lequel je stock toutes les routes possible
     'home' => 'app/controllers/homeController.php',
     'blogPost' => 'app/controllers/blogPostController.php',
-    'about' => '',
+    'create' => 'app/controllers/blogPostCreateController.php',
 ];
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_URL);
 ## Ici je stock toutes les requette GET['action'] dans la variable $action
@@ -27,5 +27,3 @@ ob_start(); // commence la mise en tampon de sortie
      # SINON SI LA VALEUR $action = est égale a une valeur stocker dans route[]
      # il prendra la valeur de action et affichera la root du tableau $route qui est identique a la valeur de $_GET['action']
      require ($routes[$action]);
-$render = ob_get_clean(); // récupère le contenu du tampon et le stocke dans $render
-echo $render; // affiche le contenu stocké dans $render
